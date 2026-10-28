@@ -104,7 +104,7 @@ The backend requires configured Supabase values at import time. API integration 
 
 ## Deployment
 
-- Build the frontend with `npm run build`, set `VITE_API_URL` to the public HTTPS API origin, and serve `frontend/dist` from static hosting. Configure SPA fallback to `index.html` so nested public and admin routes work on refresh.
+- Build the frontend with `npm run build`, set `VITE_API_URL` to the public HTTPS API origin before building, and serve `frontend/dist` from static hosting. If the frontend and API share one origin, omit it to use same-origin `/api` requests; never ship the local `127.0.0.1` value to production. Configure SPA fallback to `index.html` so nested public and admin routes work on refresh.
 - Run the backend with `uvicorn main:app --host 0.0.0.0 --port $PORT` (without `--reload`) from `backend/`. Configure `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_SECRET_KEY`, `ADMIN_EMAILS`, and exact production `CORS_ORIGINS` in the host's secret/config store. Require HTTPS.
 - Apply and verify the SQL migration in the intended Supabase project. Provision and revoke admin access through Auth plus `ADMIN_EMAILS`.
 

@@ -1,4 +1,11 @@
-export const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+const configuredApiUrl = (import.meta.env.VITE_API_URL || "").trim();
+const developmentApiUrl = "http://127.0.0.1:8000";
+const sameOriginApiUrl = typeof window !== "undefined" ? window.location.origin : "";
+
+// VITE_API_URL must be the public HTTPS FastAPI origin in a split deployment.
+// A production build without it uses same-origin /api requests instead of
+// pointing deployed visitors at their own localhost.
+export const API_URL = (configuredApiUrl || (import.meta.env.DEV ? developmentApiUrl : sameOriginApiUrl)).replace(/\/+$/, "");
 
 async function request(path, options) {
   let response;

@@ -42,7 +42,7 @@ if not all((SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, SUPABASE_SECRET_KEY, ADMIN_E
 db: Client = create_client(SUPABASE_URL, SUPABASE_SECRET_KEY)
 bearer = HTTPBearer(auto_error=False)
 app = FastAPI(title="Teacher Eric Driving School API", version="2.1.0")
-origins = [item.strip() for item in os.getenv(
+origins = [item.strip().rstrip("/") for item in os.getenv(
     "CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173"
 ).split(",") if item.strip()]
 app.add_middleware(

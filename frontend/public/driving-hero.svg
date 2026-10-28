@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">A calm road ahead</title>
+  <desc id="desc">Stylized view of a two-lane road winding through green hills beneath a clear sky.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#b9d8f4"/><stop offset="1" stop-color="#f4f8fd"/></linearGradient>
+    <linearGradient id="road" x2="0" y2="1"><stop stop-color="#68788c"/><stop offset="1" stop-color="#26364d"/></linearGradient>
+    <linearGradient id="hill" x2="0" y2="1"><stop stop-color="#8eba9b"/><stop offset="1" stop-color="#56896d"/></linearGradient>
+    <linearGradient id="dash" x2="0" y2="1"><stop stop-color="#172b46"/><stop offset="1" stop-color="#09172b"/></linearGradient>
+  </defs>
+  <rect width="1200" height="820" fill="url(#sky)"/>
+  <circle cx="930" cy="145" r="62" fill="#fff4d2" opacity=".9"/>
+  <path d="M0 390 145 278l118 84 157-151 177 170 144-117 145 129 130-166 184 162v178H0Z" fill="#a8c7d7"/>
+  <path d="m0 420 157-93 146 96 150-114 155 115 138-101 174 105 116-90 164 96v178H0Z" fill="#7ca99a"/>
+  <path d="M0 438q173-49 322 20t326-2q171-70 314 4t238-3v223H0Z" fill="url(#hill)"/>
+  <path d="M480 412c-13 70-67 124-154 184C231 659 160 722 117 820h966c-45-96-116-161-213-225-99-66-151-119-165-183Z" fill="url(#road)"/>
+  <path d="M583 414c-16 83-36 132-98 190-64 59-111 128-142 216h128c24-93 54-156 101-220 39-53 59-107 71-186Z" fill="#d8e0e9" opacity=".78"/>
+  <path d="M617 414c16 83 36 132 98 190 64 59 111 128 142 216H729c-24-93-54-156-101-220-39-53-59-107-71-186Z" fill="#d8e0e9" opacity=".78"/>
+  <path d="M599 429v34m0 33v42m0 46v57m0 53v68m0 45v53" stroke="#fff" stroke-linecap="round" stroke-width="11" opacity=".9"/>
+  <path d="M0 681q170-65 324-2t284 12q183-88 329-15t263 13v131H0Z" fill="url(#dash)"/>
+  <path d="M0 703q173-60 330 0t276 7q179-79 330-13t264 8" fill="none" stroke="#2d4662" stroke-width="8" opacity=".65"/>
+  <g fill="#3c7257" opacity=".85">
+    <circle cx="92" cy="443" r="34"/><circle cx="153" cy="416" r="28"/><circle cx="1080" cy="429" r="36"/><circle cx="1130" cy="452" r="27"/>
+    <circle cx="47" cy="524" r="25"/><circle cx="1160" cy="529" r="29"/>
+  </g>
+</svg>
